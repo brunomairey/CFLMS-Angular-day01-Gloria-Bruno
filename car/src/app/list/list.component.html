@@ -1,6 +1,6 @@
 <div class="container">
 
-	<h2 class="mt-5">Add a new Car:</h2>
+	<h2 class="mt-5">Give us your car:</h2>
 
 <form class="mt-5" [formGroup]="addCar" (ngSubmit)="onSubmit()">
  
@@ -23,6 +23,7 @@
 
 </form>
 <hr>
+<div id="error"></div>
 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-4">
 	<div *ngFor="let x of newCars">
 	      
@@ -32,8 +33,7 @@
 	      <div class="card-body">
 	        <h5 class="card-title">{{x.name}}</h5>
 	        <p class="card-text">This car was born in {{x.year}}</p>
-	        <p class="card-text">Some details about this car: {{x.details}}</p>
-
+	        <p class="card-text">Details about this car: {{x.details}}</p>
 	      </div>
 	    </div>
 	  </div>

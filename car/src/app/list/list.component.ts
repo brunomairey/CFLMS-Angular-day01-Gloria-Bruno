@@ -9,8 +9,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ListComponent implements OnInit {
 
 	addCar = new FormGroup({
-		name: new FormControl('',Validators.required),
-		year: new FormControl('',Validators.required),
+		name: new FormControl('',Validators.minLength(2)),
+		year: new FormControl('',Validators.minLength(4)),
 		details: new FormControl('',Validators.required)
 	});
 
@@ -25,7 +25,9 @@ export class ListComponent implements OnInit {
 
     if(this.addCar.valid){
       this.newCars.push(this.addCar.value);
-
+   }
+   else{
+   	document.getElementById("error").innerHTML= "Error. Not enough information."
    }
   }
 
