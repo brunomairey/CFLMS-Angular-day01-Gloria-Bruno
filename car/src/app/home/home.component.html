@@ -1,0 +1,15 @@
+ <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-4">
+<div *ngFor="let x of cars">
+      
+  <div class="col mb-4 p-2">
+    <div class="card">
+      <img src="{{x.image}}" class="card-img-top" alt="car">
+      <div class="card-body">
+        <h5 class="card-title">{{x.name}}</h5>
+        <p class="card-text">This car was born in {{x.year}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+  </div>
