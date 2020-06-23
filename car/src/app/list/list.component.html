@@ -1,1 +1,44 @@
-<p>list works!</p>
+<div class="container">
+
+	<h2 class="mt-5">Add a new Car:</h2>
+
+<form class="mt-5" [formGroup]="addCar" (ngSubmit)="onSubmit()">
+ 
+ <label>
+   Car Name:
+   <input type="text" formControlName="name">
+ </label>
+<br>
+ <label>
+   Born in:
+   <input type="text" formControlName="year">
+ </label>
+<br>
+ <label>
+   Tell us more details of the car:
+   <input type="text" formControlName="details">
+ </label>
+<br>
+ <input type="submit" class="btn btn-primary" value="Submit">
+
+</form>
+<hr>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 px-4">
+	<div *ngFor="let x of newCars">
+	      
+	  <div class="col mb-4 p-2">
+	    <div class="card">
+	    	<img src="./assets/tesla.jpg"  class="card-img-top" alt="car">
+	      <div class="card-body">
+	        <h5 class="card-title">{{x.name}}</h5>
+	        <p class="card-text">This car was born in {{x.year}}</p>
+	        <p class="card-text">Some details about this car: {{x.details}}</p>
+
+	      </div>
+	    </div>
+	  </div>
+	</div>
+</div>
+
+</div>
+

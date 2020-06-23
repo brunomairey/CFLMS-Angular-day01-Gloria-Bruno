@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListComponent } from '../list/list.component';
 
 @Component({
   selector: 'app-home',
@@ -8,12 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
 cars = [{
-	name: "tesla", year: 2010, image: "./assets/tesla.jpg"},
-	{name: "mercedes", year: 2011, image: "./assets/mercedes.jpg"},
-	{name: "peugeot", year: 2012, image: "./assets/peugeot.jpg"},
-	{name: "fiat", year: 2013, image: "./assets/fiat.jpg"}, 
-	{name: "skoda", year: 2014, image: "./assets/skoda.jpg"},
-	{name: "seat", year:2015, image: "./assets/seat.jpg"}]
+	name: "Tesla", year: 2010, image: "./assets/tesla.jpg"},
+	{name: "Mercedes", year: 2011, image: "./assets/mercedes.jpg"},
+	{name: "Peugeot", year: 2012, image: "./assets/peugeot.jpg"},
+	{name: "Fiat", year: 2013, image: "./assets/fiat.jpg"}, 
+	{name: "Skoda", year: 2014, image: "./assets/skoda.jpg"},
+	{name: "Seat", year:2015, image: "./assets/seat.jpg"}]
 
 
   constructor() { }
