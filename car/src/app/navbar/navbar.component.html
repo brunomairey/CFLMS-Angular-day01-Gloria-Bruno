@@ -14,17 +14,19 @@
       <li class="nav-item">
         <a class="nav-link active" routerLink="/list">Contactus</a>
       </li>
-       <li class="navbar-text success mx-auto text-center" id="result" style="position: absolute; left:30vw; width:40vw; border: solid blue">
-          You are VIP</li>
-          <button class="btn btn-outline-success mx-2" type="submit">Donate 10€</button>
+      <div [style.display]="clickCounter > 100 ? 'block' : 'none'">
+        <!-- <ng-template [ngIf]="clickCounter > 100" [ngIfElse]="none"> -->
+                <p class="navbar-text success mx-auto text-center"  id="result" style="position: absolute; left:30vw; width:40vw;" >You are VIP</p>
+        <!-- </ng-template> -->
+       <!--  <ng-template #none>
+                <p> </p>
+        </ng-template> -->
+      </div>
+          <button (click)="countClick()" class="btn btn-outline-success mx-2" type="submit">Donate 10€</button>
         <li class="navbar-text success mx-auto text-center" id="result">
-          You donate 10€</li>
+          You donate {{clickCounter}} €</li>
      
     </ul>
     </div>
-   
-
-    
-      
-         
+        
 </nav>
